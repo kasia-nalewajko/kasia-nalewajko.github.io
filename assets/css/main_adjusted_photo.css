@@ -3596,7 +3596,7 @@ input, select, textarea {
     border-top-left-radius: 0.25em;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
-    position: relative; /* Ensure proper stacking context */
+    position: absolute; /* Ensure proper stacking context */
     top: 0; /* Align to the top */
 }
 
