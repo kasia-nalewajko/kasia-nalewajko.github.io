@@ -711,22 +711,6 @@ input, select, textarea {
 					width: 100%;
 				}
 				
-				/* Override Stellar's centering for sections where you add align-left */
-section.special.align-left,
-article.special.align-left {
-  text-align: left;
-}
-
-/* Keep the section header/footer centered, but left-align the publication list */
-section#first.align-left header.major,
-section#first.align-left footer.major {
-  text-align: center;
-}
-
-section#first.align-left ol.pub-list,
-section#first.align-left ol.pub-list li {
-  text-align: left;
-}
 
 				.row > .off-12-xlarge {
 					margin-left: 100%;
@@ -3800,3 +3784,29 @@ section#first.align-left ol.pub-list li {
 			}
 
 		}
+		
+/* ========== Homepage: Selected Publications (left-align list) ========== */
+
+/* Override Stellar's centering for just this section */
+#first.main.special.align-left {
+  text-align: left;
+}
+
+/* Keep the title and the button centered */
+#first.main.special.align-left header.major,
+#first.main.special.align-left footer.major {
+  text-align: center;
+}
+
+/* Left-align the ordered list and keep sane indent */
+#first.main.special.align-left ol.pub-list {
+  display: inline-block;        /* lets the list be "shrink-to-fit" */
+  text-align: left;             /* ensures the content is left aligned */
+  padding-left: 1.25em;         /* restore/keep list indent (template default) */
+  margin: 0 auto 2em auto;      /* center the whole block, but left-align inside */
+}
+
+/* Make sure each li isn't being centered by other rules */
+#first.main.special.align-left ol.pub-list li {
+  text-align: left;
+}
