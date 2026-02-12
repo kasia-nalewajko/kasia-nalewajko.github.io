@@ -717,6 +717,17 @@ article.special.align-left {
   text-align: left;
 }
 
+/* Keep the section header/footer centered, but left-align the publication list */
+section#first.align-left header.major,
+section#first.align-left footer.major {
+  text-align: center;
+}
+
+section#first.align-left ol.pub-list,
+section#first.align-left ol.pub-list li {
+  text-align: left;
+}
+
 				.row > .off-12-xlarge {
 					margin-left: 100%;
 				}
